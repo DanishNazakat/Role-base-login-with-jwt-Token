@@ -57,7 +57,7 @@
 
 .singininput input {
     height: 40px;
-    width: 70%;
+    width: 90%;
     padding: 10px 20px;
     border-radius: 32px;
     outline: none;
@@ -162,6 +162,40 @@
 }
 
 
+/* Role dropdown styling */
+#role {
+    padding: 10px 10px;
+    margin-bottom: 30px;
+    border: none;
+    font-size: 16px;
+    color: #3ba8d3;
+    background-color: white;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Remove outline on focus */
+#role:focus {
+    outline: none;
+    box-shadow: 0 0 5px #3ba8d3;
+}
+
+/* Optional: Add arrow icon style */
+#role option {
+    color: #3ba8d3;
+}
+
+/* Keep consistent spacing with other inputs */
+.singininput select {
+    display: block;
+}
+
+/* If you want button and select on same styling flow */
+.singininput select,
+.singininput input {
+    font-family: sans-serif;
+}
 
 @media (min-width: 0px) and (max-width:800px) {
    .singinsec{

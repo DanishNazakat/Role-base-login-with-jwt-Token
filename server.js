@@ -1,8 +1,11 @@
 let express = require('express');
 const cors = require('cors');
-let path = require('path')
+let path = require('path');
+let jwt = require('jsonwebtoken')
 let app = express();
+const cookieParser = require("cookie-parser");
 const route=require("./Router/route");
+app.use(cookieParser());
 app.use(express.json());
 app.use(cors());
 app.use(express.static(path.join(__dirname, "public")));

@@ -46,9 +46,8 @@ async function login(req, res) {
                     status: 404,
                     message: "invalid Email or Password!"
                 })
-             
+
             }
-            res.send("invalid")
         });
         console.log("user login successfuly");
     } catch (err) {
@@ -60,7 +59,7 @@ async function login(req, res) {
 }
 
     function createBlog (req,res){
-        
+
         try{
            const {tittle,authorName,blogContent}= req.body;
            console.log(tittle,authorName,blogContent);
@@ -79,4 +78,28 @@ async function login(req, res) {
 
         }
     }
-module.exports = { home, login,createBlog  }
+
+
+
+    // get blog
+
+    async function getAllBlogs(req, res) {
+  try {
+    const allBlogs = await blogs.find(); 
+    res.send({
+      status: 200,
+      message: "Get all blogs",
+      data: allBlogs
+    });
+  } catch (err) {
+    console.log("Error fetching blogs:", err);
+    res.status(500).send({
+      status: 500,
+      message: "Error fetching blogs"
+    });
+  }
+}
+
+module.exports = { home, login,createBlog ,getAllBlogs }
+
+
