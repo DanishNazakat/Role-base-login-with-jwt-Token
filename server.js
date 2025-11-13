@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, "public")));
 let PORT=3000;
 let mongoose = require('mongoose')
 
-mongoose.connect("mongodb+srv://danishnazakat:LwkFe3qiBwUzl12H@cluster0.rpvrbpd.mongodb.net/?appName=Cluster0",
+mongoose.connect("",
     {
 
 })
