@@ -67,6 +67,17 @@
     background-color: #f1f0ec;
     color: #1596cd;
 }
+select {
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 32px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    outline: none;
+    color: #616160;
+}
 
 .singininput::placeholder {
     font-size: 20px;
